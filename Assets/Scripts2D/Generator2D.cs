@@ -24,18 +24,12 @@ public class Generator2D : MonoBehaviour {
         }
     }
 
-    [SerializeField]
-    Vector2Int size;
-    [SerializeField]
-    int roomCount;
-    [SerializeField]
-    Vector2Int roomMaxSize;
-    [SerializeField]
-    GameObject cubePrefab;
-    [SerializeField]
-    Material redMaterial;
-    [SerializeField]
-    Material blueMaterial;
+    [SerializeField] Vector2Int size;
+    [SerializeField] int roomCount;
+    [SerializeField] Vector2Int roomMaxSize;
+    [SerializeField] GameObject cubePrefab;
+    [SerializeField] Material redMaterial;
+    [SerializeField] Material blueMaterial;
 
     Random random;
     Grid2D<CellType> grid;
@@ -48,7 +42,7 @@ public class Generator2D : MonoBehaviour {
     }
 
     void Generate() {
-        random = new Random(0);
+        random = new Random(0);     // рандомное число, начиная от 0
         grid = new Grid2D<CellType>(size, Vector2Int.zero);
         rooms = new List<Room>();
 
